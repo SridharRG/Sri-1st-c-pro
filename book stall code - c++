@@ -1,0 +1,54 @@
+#include<iostream>
+#include<string.h>
+#int main ()
+{
+  int price[50], stock[50], i,j=0,qn,amt;
+  char bname[50][20],search[10];
+  
+  for (i = 1; i <= 2; i++)
+    {
+      cout << "Enter book name: ";
+      cin >> bname[i];
+
+      cout << "Enter book price: ";
+      cin >> price[i];
+
+      cout << "Enter book stock: ";
+      cin >> stock[i];
+
+    }
+     for (i = 1; i <= 2; i++)
+    {
+      cout << "\nbook name:"<<bname[i];
+   
+
+      cout << "\nbook price:"<<price[i];
+    
+
+      cout << "\nbook stock:"<<stock[i];
+      
+    }
+    cout<<"\nEnter the book name";
+    cin>>search;
+    for(i=1;i<=2;i++)
+    {
+        if(strcmp(search,bname[i])==0)
+        {
+          j+=1;
+          break;
+        }
+    }
+
+    if(j==1)
+    {
+        cout<<"\nThe book is available ";
+        cout<<"\nBook:"<<bname[i];
+        cout<<"\nstock:"<<stock[i];
+        cout<<"\nPrice:"<<price[i];
+        cout<<"\nEnter the quantity you want";
+        cin>>qn;
+        amt=qn*price[i];
+        cout<<"Amount you have to pay"<<amt;
+    }
+  return 0;
+}
